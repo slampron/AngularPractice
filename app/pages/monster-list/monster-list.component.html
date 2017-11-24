@@ -1,0 +1,6 @@
+<div *ngIf="monsters" fxLayoutAlign="center" fxLayout="row wrap" fxLayoutGap="25px">
+    <monster-card *ngFor="let monster of monsters" [monster]="monster"></monster-card>
+</div>
+
+<!-- <pre>{{junkList | json  }} </pre> -->
+<router-outlet></router-outlet>

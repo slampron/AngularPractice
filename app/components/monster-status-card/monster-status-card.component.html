@@ -1,0 +1,12 @@
+<div class="container" (click)="attack()">
+ AC: {{ monster.armor_class }}
+  <div fxLayout="row">
+    {{ monster.name }}
+    <div *ngIf="currentHP < 1">DEAD!</div>
+  </div>
+  <div>Damage: {{monsterDamage }} </div>
+  <div fxLayout="row">
+    <md-progress-bar style="height: 10px;" class="example-margin" [color]="color" [mode]="mode" [value]="value" [bufferValue]="bufferValue">
+    </md-progress-bar> {{ value | number }}%
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<div fxLayout="row" style="height: 400px;">
+    <div fxFlex="20" style="border: solid; border-color: black;">
+        <h3>Spells</h3>
+      
+            <md-chip-list class="mat-chip-list-stacked">
+                <md-chip *ngFor="let spell of spells" [ngStyle]="{ backgroundColor: 'purple', color: 'white' }" [selectable]="selectable" (click)="selectedSpell(spell)">
+                    {{spell.level}} - {{spell.name}}
+                </md-chip>
+            </md-chip-list>
+       
+    </div>
+    <div fxFlex="60" style="border: solid; border-color: black;  overflow: scroll;">
+<div *ngIf="monsters">
+        <monster-status-card *ngFor="let monster of monsters" [pbValue]="monster.hit_points" [monster]="monster"></monster-status-card>
+</div>
+
+<div *ngIf="selectedSpells">
+    <md-chip-list class="mat-chip-list-stacked">
+        <md-chip *ngFor="let spell of selectedSpells" [ngStyle]="{ backgroundColor: 'pink', color: 'black' }" [selectable]="selectable">
+            {{spell.level}} - {{spell.name}}
+        </md-chip>
+    </md-chip-list>
+</div>
+    </div>
+    <div fxFlex style="border: solid; border-color: black;">
+        <h3>Weapons</h3>
+        Weapon:
+
+    </div>
+</div>
+<router-outlet></router-outlet>

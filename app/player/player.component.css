@@ -1,0 +1,79 @@
+[_ngcontent-c2] label {
+  color: darkblue;
+  background-color: whitesmoke;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10pt;
+  padding: 1pt;
+  border-radius: 2pt;
+  position: relative;
+  left: 25px;
+}
+
+[_ngcontent-c2] input {
+  color: black;
+  background-color: whitesmoke;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10pt;
+  padding: 1pt;
+  border-radius: 2pt;
+  position: absolute;
+  left: 100px;
+}
+md-card.card-small{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 100px;
+  height: 50px;
+  color: whitesmoke;
+  background-color: purple;
+  padding: 0px;
+  margin: 25px;
+}
+
+md-card.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 500px;
+  height: 600px;
+  background-color: white;
+  padding: 0px;  
+}
+
+.card-header {
+  background-color: purple;
+  padding: 5px;
+  width: 100%;
+  height: 125px;
+}
+
+.card-header .card-title {
+  color: whitesmoke;
+  font-size: 14pt;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.card-header .card-title::first-letter { 
+  font-size: 125%;
+  /* color: #8A2BE2; */
+}
+.card-header .card-subtitle {
+  color: white;
+  font-size: 12pt;
+  margin: 5, 5;
+}
+
+.card-content {
+  height: 400px;
+  padding: 15px;
+  text-align: justify;
+  overflow-y: scroll;
+}
+
+.card-footer {
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+}
+
+.container{
+  width: 100%;
+ position: relative;
+}

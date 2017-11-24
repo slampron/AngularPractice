@@ -1,0 +1,61 @@
+<md-card class="card" *ngIf="monster">
+    <md-card-header class="card-header">
+        <md-card-title class="card-title">
+            {{monster.name}}
+        </md-card-title>
+        <md-card-subtitle class="card-subtitle">
+            <p>Challange Rating: {{monster.challenge_rating}}</p>
+            <p>AC: {{monster.armor_class}} HP: {{monster.hit_points}}</p>
+            <p>Hit Dice: {{ monster.hit_dice }}</p>
+        </md-card-subtitle>
+    </md-card-header>
+    <md-card-content fxLayout="column" class="card-content">
+        Actions:
+        <div class="actions">
+            <table class="table table-condensed">
+                <thead>
+                    <tr>
+                        <th style="column-width:50px; text-align: center;">Bonus</th>
+                        <th style="column-width:150px;">Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let action of monster.actions">
+                        <td style="column-width:50px; text-align: center;">{{action.attack_bonus}}</td>
+                        <td style="column-width:150px;">{{action.name}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        Special Abilities:
+        <div class="description">
+            <div *ngFor="let ability of monster.special_abilities" fxLayout>
+                <table class="table table-condensed">
+                    <thead>
+                        <tr>
+                            <th style="column-width:50px; text-align: center;">Bonus</th>
+                            <th style="column-width:150px;">Name</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let action of monster.actions">
+                            <td style="column-width:50px; text-align: center;">{{action.attack_bonus}}</td>
+                            <td style="column-width:150px;">{{action.name}}</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">{{ability.desc}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- 
+                <p>Bonus:{{ability.attack_bonus}}</p>
+                <p>Name: {{ability.name}} Desc: {{ability.desc}} </p> -->
+            </div>
+        </div>
+    </md-card-content>
+    <!-- <md-card-actions class="card-footer">       
+                <button md-raised-button color="primary" (click)="useSpell()">Use Spell</button>     
+    </md-card-actions> -->
+</md-card>

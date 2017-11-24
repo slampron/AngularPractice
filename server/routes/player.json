@@ -1,0 +1,15 @@
+{
+    "data": [
+        {
+            "id": 2,
+            "race": "Human",
+            "xp": 1,
+            "level": 1,
+            "gold": 1,
+            "armor": 38,
+            "weapon": 1,
+            "name": "Ragnar",
+            "class": "Fighter"
+        }
+    ]
+}

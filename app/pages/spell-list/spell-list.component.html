@@ -1,0 +1,7 @@
+<h1>Magic School</h1>
+
+<div *ngIf="spells" fxLayoutAlign="center" fxLayout="row wrap" fxLayoutGap="25px">
+    <spell-card *ngFor="let spell of spells" [spell]="spell"></spell-card>
+</div>
+
+<router-outlet></router-outlet>
